@@ -1,0 +1,30 @@
+#version 130
+
+attribute vec3 a_position;
+attribute vec3 a_color;
+attribute vec3 a_normal;
+attribute vec3 a_ambiant_occlusion;
+attribute vec2 a_texcoords;
+
+varying vec3 fragmentColor;
+varying vec3 Normal;
+varying vec3 Ambiant_Occlusion;
+varying vec3 FragPos;
+varying vec2 TexCoords;
+varying vec3 viewPos;
+
+uniform mat4 input_view;
+uniform mat4 input_proj;
+uniform mat4 input_normal;
+
+void main()
+{
+    fragmentColor = a_color;
+    gl_Position = input_proj * input_view * vec4(a_position, 1.0);
+	vec4 fragPos4 = input_view * vec4(a_position, 1.0);
+	FragPos = vec3(fragPos4) / fragPos4.w;
+	viewPos = vec3(input_view);
+	Normal = vec3(input_normal * vec4(a_normal, 0.0));
+	TexCoords = a_texcoords;
+	Ambiant_Occlusion = a_ambiant_occlusion;
+}
