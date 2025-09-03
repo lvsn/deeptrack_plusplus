@@ -1,0 +1,17 @@
+scipy
+scikit-image
+nibabel
+torch
+torchvision
+torchgeometry
+PyOpenGL
+vispy
+plyfile
+opencv-python
+tqdm
+imageio
+Pillow
+Pillow_SIMD
+seaborn
+trimesh
+PyYAML

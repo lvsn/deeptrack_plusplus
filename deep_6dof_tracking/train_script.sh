@@ -33,36 +33,5 @@ finetune() {
 	cp train_script.sh $OUTPUT_PATH/$1
 }
 
-#cd tools
-#python3 dataset_mean.py -d $DATA_PATH/generic -b $BACKGROUND_PATH -r $OCCLUDER_PATH
-#cd ..
-
-#train generic res wacv_rgb
-
 train generic res_moddropout wacv_moddrop_donly_174_0
 train generic res_rgb wacv_rgb_donly_174_0
-
-train generic res_moddropout wacv_moddrop_donly_174_1
-train generic res_rgb wacv_rgb_donly_174_1
-
-#train generic res_moddropout wacv_moddrop_174_2
-#train generic res_rgb wacv_rgb_174_2
-
-#train generic res_moddropout wacv_moddrop_174_4
-#train generic res_rgb wacv_rgb_174_4
-#train generic res_moddropout wacv_moddrop_1
-#train generic res_rgb wacv_rgb_1
-
-#train generic res_moddropout wacv_moddrop_2
-#train generic res_rgb wacv_rgb_2
-
-#train generic res_moddropout wacv_moddrop_3
-#train generic res_rgb wacv_rgb_3
-
-#train generic res_moddropout wacv_moddrop_4
-#train generic res_rgb wacv_rgb_4
-
-#train kinect_box res_consistence consistence_iccv
-#train kinect_box res iccv
-#train ${dataset} res_moddropout moddrop_iccv
-#train ${dataset} res_split split0_iccv
